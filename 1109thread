@@ -1,0 +1,7 @@
+퀀텀 타임 (quantum time) - 시간조각
+	시분할 (time sharing)
+	여러 프로그램을 돌아가면서 실행 -> 스케쥴링
+	
+	물리 적으로 동시에 돌아감 -> 병렬성(parallelism)
+	실제로 동시에 돌아가는 것처럼 보임 -> 동시성(concurrency)
+	
