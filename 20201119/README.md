@@ -431,7 +431,46 @@ public class Application {
 }
 ```
 
-# 4. 네트워크 입출력
+
+# 4. 네트워크
+
+- ip 주소 : 네트워크 상에서 컴퓨터를 식별하기 위한 주소
+- port : 컴퓨터에서 프로그램을 구분하기 위한 번호
+
+
+## 4.1. SOcket
+
+서버소켓 생성
+
+```java
+int 포트번호 = 12345;
+ final ServerSocket serverSocket = new ServerSocket(포트번호);
+ ```
+
+ 서버 소켓으로 클라이언트 접속 대기
+
+ ```java 
+final Socket socket = serverSocket.accept();
+ ```
+
+- accept 는 blocking
+- 접속이 되고 나면 'socket' 반환
+
+클라이언트소켓
+
+```java
+final String ip = "localhost"
+final int port = 12345;
+final Socket socket = new Socket(ip, port); 
+```
+
+소켓(서버, 클라 동일)에서 스트림 얻기
+
+```java
+socket.getInputStream();
+socket.getOutputStream();
+```
+## 4.1. 네트워크 입출력
 
 client - server
 

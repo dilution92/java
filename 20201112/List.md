@@ -7,7 +7,7 @@
 예로
 - List
 - Set
--Queue
+- Queue
 - Stack
 
 결론 : 인터페이스
