@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>제목</title>
+    </head>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <body>
+        <div class="box" id="box" name="box">내용</div>
+        <button id="btn">눌러</button>
+        <script>
+          //  1. id로 선택
+          //  1-1. document.getElementById('box')
+          //  1-2. document.getElementById('#box')
+          // const box = document.querySelector('#box'); id로 받을경우
+          const box = document.getElementById('box');
+            box.style.backgroundColor = 'blue';
+            console.log(box.innerText)
+            box.innerText = '파란 박스'
+            const btn = document.querySelector('#btn')
+            console.log(btn.innerText)
+
+          //  2. 클래스로 선택
+          //  2-1. document.getElementsByClassName('box')
+          //  2-2. document.querySelectorAll('.box')
+          const boxes = document.getElementsByClassName('box')
+            console.log(boxes) // 배열로 받아지기 때문
+            boxes[0].style.backgroundColor = 'conrnflowerblue'
+
+          //  3. 태그 이름으로 선택
+          //  3-1. document.getElementsByTagName('div');
+          //  3-2. document.querySelectorAll('div');
+            const b = document.getElementsByTagName('div')
+            b[0].style.backgroundColor = 'crimson'
+
+        </script>
+    </body>
+</html>
