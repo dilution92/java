@@ -27,11 +27,13 @@ IoC(Inversion of Control)
 스프링의 역할
 - IoC Container
   - Bean: 스프링에서 관리하는 객체. 라이프사이클 존재.
-    - Component: 이 어노테이션이 붙으면 스프링이 관리함
-      - Controller
-      - RestController
-      - Service
-      - Repository
+    - `@Component`: 이 어노테이션이 붙으면 스프링이 관리함
+      - `@Controller`
+      - `@RestController`
+      - `@Service`
+      - `@Repository`
+    - `@Bean`
+      - 주로 외부 라이브러리를 사용할 때 사용함 
     - 빈을 등록하는 과정
       - 스프링 프레임워크가 시작되면 등록할 클래스를 탐색해서(xml, Java Config(annotation)) IoC 컨테이너에 등록
     - 기본적으로 싱글톤임
