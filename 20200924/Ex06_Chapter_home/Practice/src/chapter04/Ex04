@@ -1,0 +1,53 @@
+(a) Student2 클래스 설계
+1.	변수들
+	name: 이름
+	number: 학번
+
+2.	메소드
+	생성자메소드: 주어진 값들을 가진 새로운 Student 객체를 생성한다
+	toString: 현 Student 객체의 정보에 대한 문자열을 반환한다
+	getName: 학생의 이름을 반환한다
+	getNumber: 학생의 학번을 반환한다
+	setName: 학생의 이름을 주어진 값으로 변경한다
+	setNumber: 학생의 학번을 주어진 값으로 변경한다
+
+(b) ClassRoll 클래스 설계
+	1. 변수들
+	sbook: Student 객체들의 배열
+	coursename: 교과목명
+	size: 출석부의 크기
+	count: 출석부에 있는 사람들의 수
+
+2. 메소드
+	생성자메소드: 크기가 30인 빈 출석부 객체를 생성한다
+	setCourseName: 교과목명을 주어진 값으로 변경한다
+	getCourseName: 교과목명을 반환한다
+	add: 한 Student 객체를 출석부에 추가한다
+	findIndex: 주어진 Student 객체의 출석부내의 위치(index)를 알려 준다
+	delete: 주어진 Student 객체를 출석부에서 삭제한다
+	search: 주어진 Student 객체를 출석부에서 찾아서 출석를 알려준다
+	toString: 출석부의 모든 정보를 알려 준다
+
+(c) ClassRollDriver 클래스 설계
+1. 변수들: 없음
+
+2. 메소드: main 메소드
+
+3.	main 메소드 설계
+	변수들
+	student: 학생 객체
+	coursename: 교과목명
+	name: 추가하는 학생의 이름
+	number: 추가하는 학생의 학번
+	choice: 사용자가 선택하는 연산
+
+	알고리즘 
+1.	ClassRoll 객체를 만든다.
+2.	교과목명을 입력 받아 coursename에 저장한다.
+3.	사용자가 원하는 연산을 선택하게 하고 선택한 값을 choice에 저장한다.
+4.	choice가 1이면 추가하는 학생의 학번과 이름을 입력 받아 학생 객체를 생성한 후 그 객체를 출석부에 추가하고 출력한다.
+5.	choice가 2이면 삭제하는 학생의 학번을 입력 받아 해당 학생을 출석부에서 삭제한다.
+6.	choice가 3이면 찾는 학생의 학번을 입력 받아 해당 학생을 출석부에서 찾고 찾았으면 그 학생의 이름을 출력한다.
+7.	choice가 4이면 출석부를 출력한다.
+8.	choice가 5이면 끝내고 아니면 3번으로 간다.
+
