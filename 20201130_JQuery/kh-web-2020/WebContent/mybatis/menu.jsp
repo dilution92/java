@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>menu</title>
 </head>
 <body>
-TRAVERSE
+<h3>MYBATIS</h3>
 </body>
 </html>
