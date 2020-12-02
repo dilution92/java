@@ -64,6 +64,13 @@ IoC(Inversion of Control)
   - 저장과 관련된 인터페이스
   - 인터페이스 구현체
 
+## 2.0. 의존성 주입
+
+- 생성자 주입 방식
+- `@Autowired`
+- `@Inject`(deprecated)
+
+
 ## 2.1. 컨트롤러
 
 이 레이어가 처리하는 일은 다음과 같다.  
