@@ -30,7 +30,7 @@
   examples web application, do not forget to remove the <!.. ..> that surrounds
   them. You will also need to set the passwords to something appropriate.
 -->
-  <role rolename="tomcat"/>
+<role rolename="tomcat"/>
   <role rolename="role1"/>
   <role rolename="manager"/>
   <role rolename="admin"/>
@@ -41,4 +41,5 @@
   <user password="tomcat" roles="role1" username="role1"/>
   <user password="admin" roles="admin,manager,admin-gui,manager-gui" username="admin"/>
   <user password="tomcat" roles="admin,manager,admin-gui,manager-gui" username="tomcat"/>
+
 </tomcat-users>
