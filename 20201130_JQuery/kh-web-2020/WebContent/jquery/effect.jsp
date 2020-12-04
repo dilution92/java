@@ -74,6 +74,8 @@
 	$('#btnAni').on('click',function(){
 		$('#target').animate({width: 'toggle', opacity: 'toggle'}, 2000);
 	})
+	
+	$('')
 </script>
 </body>
 </html>
