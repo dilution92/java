@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#contents{
+	box-sizing: border-box;
+	height: auto;
+	overflow: auto;
+}
+
+#footer{
+	box-sizing: border-box;
+}

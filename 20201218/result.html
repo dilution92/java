@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+		crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        fieldset {
+            width: 600px;
+        }
+        form>#main {
+            text-align: right;
+            display: flex;
+        }
+        
+        #labelbox {
+            flex: 1 1 0;
+            text-align: center;
+            width: 150;
+        }
+
+        #inputbox {
+            margin-left: 15px;
+            flex: 1 1 0;
+            text-align: left;
+        }
+
+        #btnbox {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .lb{
+            line-height: normal;
+        }
+
+    </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>회원가입</legend>
+            <!--2. 회원가입 폼의 회원가입 버튼을 클릭하면 result.html로 이동한다.-->
+            <form id="content" action="result.html" >
+                <div id="main">
+                    <div id="lebelbox">
+                        <label class="lb" for="mid">아이디</label>
+                        <br/>
+                        <label class="lb" for="name">이름</label>
+                        <br/>
+                        <label class="lb" for="gender">취미</label>
+                        <br/>
+                        <label class="lb" for="phone">전화번호</label>
+                    </div>
+                    <div id="inputbox">
+                        <!--1.  모든항목 반드시 입력 required속성 추가-->
+                        <input type="text" class="in" name="mid" id="mid" required>
+                        <span id="idwarn"></span>
+                        <br/>
+                        <input type="text" class="in" name="name" id="name" required>
+                        <br/>
+                        <input type="checkbox" class="in" name="hobby" id="hob1" >피아노
+                        <input type="checkbox" class="in" name="hobby" id="hob2" >게임
+                        <input type="checkbox" class="in" name="hobby" id="hob3" >테니스
+                        <input type="checkbox" class="in" name="hobby" id="hob4" >등산
+                        <br/>
+                        <input type="text" class="in" name="phone" id="phone" required>
+                    </div>
+                </div>
+                <div id="btnbox">
+                    <input class="btn" type="submit" id="btnsub" value="회원가입">
+                    <!--10. 취소를 클릭하면 입력한 데이터가 초기화 된다.-->
+                    <input class="btn"  type="reset" value="취소">
+                </div>
+            </form>
+           </fieldset>
+           <script>
+               //3. 회원가입 버튼을 클릭한 경우 아이디와 이름의 데이터를 비교하여 일치하면 "아이디와 이름의 값은 일치하면 안됩니다" 대화 상자가 나타나고 result.html로 이동하지 않는다.
+               $('#btnsub').on('click', function(){
+                    var mid = document.getElementById("mid");
+                    var name = document.getElementById("name");
+                    if($(mid).val() === $(name).val()){
+                        alert("아이디와 이름의 값은 일치하면 안됩니다.");
+                        return false;
+                    }
+                    //4. 선택한 취미의 갯수를 구한다.
+                    if ($('input:checkbox[name=hobby]:checked').length < 2) {
+                    //5. 취미를 2개 미만 선택하는 경우 "취미는 2개 이상 선택하세요"라는 대화상자가 나타난다.
+                        alert("취미는 2개 이상 선택하세요.");
+                    }
+                    
+                    var phone = document.getElementById('phone');
+                    //6. 전화번호는 국번은 0으로 시작하고 최대3자리까지, 가운데 자리는 3자리 또는 4자리, 마지막 자리는 4자리
+                    var phchk = /^[0]\d{1,2}-\d{3,4}-\d{4}/;
+                    //7~9
+                    if (!phchk.test($('#phone').val())) {
+                        //7. 전화번호 형식에 맞지 않으면 "전화번호 형식을 확인하세요"라는 대화상자가 나타난다.
+                        alert("전화번호 형식을 확인하세요.");
+                        //8.  전화번호 형식에 맞지 않으면 기존에 입력한 전화번호는 삭제하고 다시 입력하도록 포커스를 준다.
+                        $('#phone').val("");
+                        $('#phone').focus();
+                        //9. 전화번호 형식에 맞지 않으면 submit을 수행하지 않는다.
+                        return false;
+                    }
+               });
+            
+           </script>
+    </body>
+</html>

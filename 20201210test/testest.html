@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>aaa</title>
+    </head>
+    <style>
+        *, html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+        #contentbox {
+        margin-top: 3rem;
+           width: 300px;
+           display: flex;
+        }
+        #contentbox>div {
+            width: 45%;
+            flex: 1 1 0;
+        }
+
+        #labelbox>p {
+            text-align: right;
+            margin-right: 15px; 
+            height: 30px;
+        }
+
+        #inputbox>div {
+            height: 30px;
+        }
+
+        #submitbox {
+            width: 300px;
+            text-align: center
+        }
+
+        .btn_submit{
+            height: 30px;
+            width: 70px;
+        }
+    
+
+    </style>
+    <body>
+        <form>
+            <div id="contentbox">
+                <div id="labelbox">
+                    
+                    <p><label class="labeltag" id="label_id" onclick="document.getElementById('id').focus()"></label>아이디</label></p>
+                    <p><label class="labeltag" id="label_password" onclick="document.getElementById('password').focus()">비밀번호</label></p>
+                    <p><label class="labeltag" id="label_chk_password" onclick="document.getElementById('chkpassword').focus()">비밀번호확인</label></p>
+                    <p><label class="labeltag" id="label_name" onclick="document.getElementById('name').focus()">이름</label></p>
+                    <p><label class="labeltag" id="label_sex">성별</label></p>
+                    <p><label class="labeltag" id="label_email" onclick="document.getElementById('email').focus()">이메일</label></p>
+                 
+                </div>
+                <div id="inputbox">
+                    <div>
+                        <input type="text" id="id">
+                        <span class="error_next_box"></span>
+                    </div>
+                    
+                    <div>
+                        <input type="password" id="password">
+                    </div>
+                    
+                    <div>
+                        <input type="password" id="chkpassword" >
+                    </div>
+                    
+                    <div>
+                        <input type="text" minlength="5" id="name">
+                    </div>
+                
+                    <div>
+                        <label>남<input type="radio" name="sex" value="남"></label>
+                        <label>여<input type="radio" name="sex" value="여"></label>
+                    </div>
+        
+                    <div>
+                        <input type="email" id="email">
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <div id="submitbox">
+                <input class="btn_submit" type="submit" value="회원가입">
+                <input class="btn_submit" type="submit" value="취소">
+            </div>
+        </form>
+        <script>
+            $('#labelbox>label').on('click', function{
+                
+            })
+        </script>
+    </body>
+</html>
